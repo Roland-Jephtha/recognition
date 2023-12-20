@@ -1,0 +1,42 @@
+.signin__main {
+  height: 24rem;
+  /* margin-top: 4rem; */
+  padding: 2rem;
+  width: full;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin__main__heading {
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+
+.signin__main__options {
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.signin__main__options__face,
+.signin__main__options__fingerprint {
+  text-decoration: none;
+  color: #000;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  & :hover {
+    color: #555;
+  }
+}
+
+.signin__main__options__fingerprint {
+}

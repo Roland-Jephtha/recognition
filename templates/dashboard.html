@@ -1,0 +1,53 @@
+
+
+{%load static%}
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/dashboard.css' %}" />
+    <title>User Dashboard</title>
+  </head>
+  <body>
+    <div class="container-body">
+      <div class="header">
+        <h1>hi {{profiles.first_name}}! 👋</h1>
+       <a href="{% url 'logout' %}">
+        <button>Log out</button>
+       </a> 
+      </div>
+      <div class="user-info">
+        <div class="user-details">
+          <h2>User Information</h2>
+          <p><strong>Name:</strong> {{profiles.first_name}}  {{profiles.last_name}}</p>
+          <p><strong>Phone Number:</strong> {{profiles.first_name}}</p>
+          <p><strong>Email:</strong> {{profiles.email}}</p>
+          <p><strong>State:</strong> {{profiles.state}}</p>
+          <p><strong>City:</strong>{{profiles.city}}</p>
+          <p><strong>LGA:</strong> {{profiles.first_name}}</p>
+          <p><strong>Matriculation Number:</strong> {{profiles.mat_no}}</p>
+          <p><strong>Department:</strong> {{profiles.department}}</p>
+          <p><strong>Year of Study:</strong> {{profiles.study_year}}</p>
+          <p><strong>Year of Graduation:</strong> {{profiles.graduation_year}}</p>
+        </div>
+        <div class="user-media">
+          <!-- <h2>User Media</h2> -->
+          <img src="{{profiles.photo.url}}" alt="User Photo" />
+
+          <img src="./assets/img/fingerprint-image.svg" alt="Fingerprint" />
+        </div>
+      </div>
+    </div>
+
+    <footer class="system__footer">
+      <p>Identity authentication system</p>
+      <p>By Project Group 7</p>
+    </footer>
+  </body>
+</html>

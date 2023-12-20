@@ -1,0 +1,56 @@
+
+
+
+{%load static%}
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/home.css' %}" />
+    <title>Identity System</title>
+  </head>
+  <body>
+    <div class="container-body">
+      <header class="system__header">
+        <a href="{%url 'index'%}" class="system__header__logo">
+          <img src="{% static 'assets/img/PTI-Logo2.png' %}" alt="" srcset="" width="15%" />
+        </a>
+        <div class="system__header__ctas">
+          <ul class="system__header__ctas__list">
+            <li>
+              <a href="{%url 'signin'%}">SignIn</a>
+            </li>
+            <li>
+              <a href="{%url 'register'%}">SignUp</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      <main class="homepage__main">
+        <div class="homepage__main__text">
+          <h1 class="homepage__main__text__heading">Welcome</h1>
+          <p class="homepage__main__text__desc">
+            Feel free to take a glance at the functionality of this website.
+            Dive into the future, where Machines learn, Adapt, and Innovate.
+          </p>
+        </div>
+        <div class="homepage__main__cta">
+        <a href="{%url 'register'%}" class="homepage__main__cta__link">
+            Register Here
+          </a>
+        </div>
+      </main>
+
+      <footer class="system__footer">
+        <p>Identity authentication system</p>
+        <p>By Project Group 7</p>
+      </footer>
+    </div>
+  </body>
+</html>
+

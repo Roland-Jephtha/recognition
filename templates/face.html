@@ -1,0 +1,68 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
+    <link rel="stylesheet" href="{% static 'assets/css/face.css' %}" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>     .
+
+    <title>Identity System</title>
+  </head>
+  <body>
+    <div class="container-body">
+      <header class="system__header">
+        <a href="{%url 'index'%}" class="system__header__logo">
+          <img src="{% static 'assets/img/PTI-Logo2.png' %}" alt="" srcset="" width="15%" />
+        </a>
+        <div class="system__header__ctas">
+          <ul class="system__header__ctas__list">
+            <li>
+              <a href="{%url 'signin'%}">SignIn</a>
+            </li>
+            <li>
+              <a href="{%url 'register'%}">SignUp</a>
+            </li>
+          </ul>
+        </div>
+      </header>
+
+      {%csrf_token%}
+
+      <main class="face__main">
+        <div class="face__main__content">
+          <div class="face__main__content-camera">
+            <p>Camera: front</p>
+            <video
+            id="video-element"
+            class="rounded-xl"
+              style="border: 2px solid #222"
+              width="300"
+              height="300"
+              autoplay
+              muted
+
+
+            ></video>
+            <div id="img-element" style="border: 2px solid #222; width: 300px; height: 225px; display: none; border-radius: 0.75rem; overflow: hidden;"></div>
+          </div>
+        </div>
+        <div class="face__main__content-buttons">
+          <button class="face__main__content-button-capture"  id="capture-btn">Take Photo</button>
+          <button class="face__main__content-button-reload" id="reload-btn">Reload</button>
+        </div>
+
+      </main>
+
+      <footer class="system__footer">
+        <p>Identity authentication system</p>
+        <p>By Project Group 7</p>
+      </footer>
+    </div>
+  </body>
+
+  <script src="{% static 'login.js' %}"></script>
+</html>

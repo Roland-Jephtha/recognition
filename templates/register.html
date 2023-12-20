@@ -1,0 +1,42 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{%block content%}
+
+
+
+<form action="" method="post" enctype="multipart/form-data">
+
+    {%csrf_token%}
+
+    <p>username</p>
+    <input type="text" name="username" required>
+    <p>first name</p>
+    <input type="text" name="fname"  required>
+    <p>last name</p>
+    <input type="text" name="lname" required>
+    <p>email</p>
+    <input type="email" name="email" required>
+    <p>Take a Photo</p>
+    <input type="file" name="photo" required>
+    <p>password</p>
+    <input type="password" name="password" required>
+
+
+    <button>Submit</button>
+
+
+</form>
+
+
+
+{%endblock content%}
+
+
+
+
+
+

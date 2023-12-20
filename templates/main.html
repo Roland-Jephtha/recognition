@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+Logged in as : {{request.user.username}}
+<br>
+
+{{profiles.username}}
+<br><br>
+<a href="{% url 'logout' %}" class="btn btn-danger">logout</a>
+
+{% endblock content %}
